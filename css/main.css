@@ -30,6 +30,7 @@ body, html {
   scroll-snap-type: both mandatory;
   overflow: scroll;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 .section {
