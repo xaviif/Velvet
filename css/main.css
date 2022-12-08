@@ -407,11 +407,16 @@ body, html {
   width: 25%;
 }
 .templ8 .overlay .title {
-  font-size: 1.5em;
+  font-size: 1.55em;
+  padding-top: 0.71em;
 }
 .templ8 .overlay .quoteText {
-  font-size: 1.25em;
+  font-size: 1.55em;
   opacity: 1;
+  padding: 0.3px 10px;
+}
+.templ8 .overlay .quoteText {
+  font-size: 1em;
 }
 
 .fabric::before {

@@ -248,11 +248,16 @@
       width: 25%;
     }
     .title{
-      font-size: 1.5em;
+      font-size: 1.55em;
+      padding-top: .71em;
     }
     .quoteText{
-      font-size: 1.25em;
+      font-size: 1.55em;
       opacity: 1;
+      padding: .3px 10px;
+      &{
+        font-size: 1em;
+      }
     }
 
   }
