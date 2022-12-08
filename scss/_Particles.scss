@@ -1,0 +1,25 @@
+.particle{
+  position: fixed;
+  z-index: 2;
+  border-radius: 100%;
+}
+.small{
+  width: 1px; height: 1px;
+}
+
+.medium{
+  width: 3px; height: 3px;
+}
+
+.large{
+  width: 5px; height: 5px;
+}
+.far{ 
+  background-color: rgba(208, 198, 198, 0.247); 
+}
+.near{
+  background-color: rgba(241, 232, 232, 0.304);
+}
+.close{
+  background-color: rgba(255, 255, 255, 0.434);
+}

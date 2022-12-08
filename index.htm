@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velvet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald&family=Playfair+Display&family=Raleway&family=Roboto&family=Roboto+Mono&family=Roboto+Slab&family=Titillium+Web&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/main.css">
+  <script class="pageTemplate" type="text/template">
+    <section class="section templI" id="{{sectionID}}">
+      <div class=" header">
+        <h2 class="zfront infoTitle"></h2>
+      </div>
+      <div class=" quote">
+        <div class=" bkImg"></div>
+        <p>"<span class=" quoteText"></span>" -{{info.author.firstName}} {{info.author.lastName}}</p>
+      </div>
+      <h3>{{info.author.firstName}} {{info.author.lastName}}</h3>
+    </section>
+  </script>
+  <script class="pageTemplate" type="text/template">
+    <section class="section templII" id="{{sectionID}}">
+      <div class="left">
+        <h1 class="infoTitle"></h1>
+        <span>
+          <div class="bkImg borderColor "></div>
+        </span>
+        <h3>{{info.author.firstName}} {{info.author.lastName}}</h3>
+      </div>
+      <div class="right bkImg ">
+      </div>
+    </section>
+  </script>
+
+  <script class="pageTemplate" type="text/template">
+    <section class="section templ3" id="{{sectionID}}">
+      <div class="backgroundText ">
+        <h3 class="textFont">{{info.author.firstName}}</h3>
+        <h3 class="textFont">{{info.author.lastName}}</h3>
+      </div>
+      <div class="content ">
+        <div class="bkImg noAttachment">
+
+        </div>
+        <h1 class="accent-bkColor textFont">{{info.author.firstName}} {{info.author.lastName}}</h1>
+      </div>
+    </section>
+  </script>
+
+  <script class="pageTemplate" type="text/template">
+    <section class="section templ4" id="{{sectionID}}">
+      <div class=" top ">
+        <p><span class=" quoteText repeat-10 "></span></p>
+      </div>
+      <div class="bottom bkImg">
+        <p class="author bkImg">{{info.author.firstName}} {{info.author.lastName}}</p>
+      </div>
+    </section>
+  </script>
+  <script class="pageTemplate" type="text/template">
+    <section class="section templV" id="{{sectionID}}">
+      <div class="bkImg"></div>
+      <p class="quote">"<span class="quoteText"></span>"<br></p>
+      <p class="text-right"> -{{info.author.firstName}} {{info.author.lastName}}</p>
+  </script>
+  <script class="pageTemplate" type="text/template">
+    <section class="section templ6 bkImg" id="{{sectionID}}">
+      <div class="longDesc sec-bkColor"></div>
+      <p class="text-right"> -{{info.author.firstName}} {{info.author.lastName}}</p>
+  </script>
+  <script class="pageTemplate" type="text/template">
+    <section class="section templ7" id="{{sectionID}}">
+      <div class="backgroundText ">
+        <h3 class="textFont">{{info.author.firstName}}</h3>
+        <h3 class="textFont">{{info.author.lastName}}</h3>
+      </div>
+      <div class="content">
+        <span>
+          <div class="bkImg">
+
+          </div>
+          <div class="bkImg">
+
+          </div>
+          <div class="bkImg">
+
+          </div>
+        </span>
+        <h1 class="accent-bkColor textFont">{{info.author.firstName}} {{info.author.lastName}}</h1>
+      </div>
+    </section>
+  </script>
+  <script class="pageTemplate" type="text/template">
+    <section class="section templ8" id="{{sectionID}}">
+      <div class="bkText">
+        <p class="bkImg">{{info.author.firstName}} </p>
+        <p class="bkImg"> {{info.author.lastName}} </p>
+        <p class="bkImg quoteText" ></p>
+      </div>
+      <div class="overlay">
+        <div class="headshot"></div>
+        <h2 class="title">{{info.author.firstName}} {{info.author.lastName}}</h2>
+        <h4>"<span class="quoteText"></span>"</h4>
+      </div>
+    </section>
+  </script>
+</head>
+<body>
+  <main id="fullpage"> 
+    <section class="section" id="landing">
+      <h1 class="zfront"> 
+        Velvet
+      </h1>
+      <p class="zfront">Want To Beat Those Feelings of <span class="sadText">Demotivation</span>?<br>
+        Try <span class="highlightText">Velvet</span>!<br>
+        Stop Wasting Your Time on Social Media! Get 10x Results from <span class="highlightText">Velvet</span> today!<br>
+        <span class="highlightText">Velvet</span> is Here!
+      </p>
+      <p class="action zfront">Start Scrolling to Start!</p>
+    </section>  
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+  <script src="./javascript/Page.js"></script>
+  <script src="./javascript/Pieces.js"> </script>
+  <script src="./javascript/Library.js"> </script>
+  <script src="./javascript/Particles.js"> </script>
+  <script src="./javascript/script.js"> </script>
+  <script>
+
+  </script>
+</body>
+</html>

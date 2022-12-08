@@ -1,0 +1,49 @@
+@import 'util';
+@import 'animations';
+@import 'Particles';
+@import 'Templates';
+
+$paddingLanding: 5vw;
+#landing{
+  background: linear-gradient(180deg, rgba(134,36,43,1) 45%, rgba(74, 24, 28, 0.95) 100%);
+  
+  font-family: 'Ubuntu', sans-serif;
+  background-attachment: fixed;
+  text-shadow: #000 3px 3px 1px;
+  h1{
+    font-size: 5rem;
+    color: #fff;
+    padding: 15vh 10vh $paddingLanding;
+    z-index: 3;
+    position: relative;
+    
+  }
+  p{
+    color: #e49173;
+    font-size: 1.321em;
+    padding-left: calc($paddingLanding + 1em);
+    font-family: 'Playfair Display', sans-serif;
+    z-index: 3;
+    position: relative;
+  }
+  .action{
+    color: #e49173;
+    padding-left: calc($paddingLanding + 1em);
+    padding-top: 0.4em;
+    font-size: 1.5em;
+    animation: blinkText 2s steps(2) infinite;
+  }
+}
+
+#landing::before{
+  filter: drop-shadow(0px 1px 31px #c9d5d2) ;
+  //margin-left: calc($paddingLanding * -1);
+  content: "";
+  width: 100vw; height: 100vh;
+  background: url(../assets/45-degree-fabric-light.png) ;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+
+}

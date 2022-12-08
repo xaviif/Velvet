@@ -1,0 +1,566 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body, html {
+  max-width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.highlightText {
+  color: rgb(223, 207, 207);
+  font-size: 1.85rem;
+  text-shadow: rgb(0, 0, 0) 3px 3px 1px;
+  padding: 5px;
+  position: relative;
+  display: inline-block;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.highlightText:hover {
+  color: rgb(255, 255, 255);
+  transform: scale(2, 1.5);
+}
+
+#fullpage {
+  scroll-snap-type: both mandatory;
+  overflow: scroll;
+  height: 100vh;
+}
+
+.section {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.sadText {
+  font-family: "Ubuntu";
+  letter-spacing: 0.75px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+@keyframes left-right {
+  0% {
+    background-position: 0% 0%;
+    filter: blur(0px) contrast(15%) opacity(40%);
+  }
+  5% {
+    background-position: 0% 2vh;
+    filter: blur(0.2px) contrast(13%) opacity(48%);
+  }
+  50% {
+    background-position: 5vw 50vh;
+    filter: contrast(11%) opacity(50%);
+  }
+  90% {
+    background-position: 100vw 120vh;
+    filter: blur(0.25px) contrast(22%) opacity(42%);
+  }
+  100% {
+    background-position: 100vw 125vh;
+    filter: blur(0.25px) contrast(20%) opacity(41%);
+  }
+}
+@keyframes blinkText {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #e49173;
+  }
+}
+.particle {
+  position: fixed;
+  z-index: 2;
+  border-radius: 100%;
+}
+
+.small {
+  width: 1px;
+  height: 1px;
+}
+
+.medium {
+  width: 3px;
+  height: 3px;
+}
+
+.large {
+  width: 5px;
+  height: 5px;
+}
+
+.far {
+  background-color: rgba(208, 198, 198, 0.247);
+}
+
+.near {
+  background-color: rgba(241, 232, 232, 0.304);
+}
+
+.close {
+  background-color: rgba(255, 255, 255, 0.434);
+}
+
+.templI {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.templI h2 {
+  font-size: 2em;
+  padding: 5vh 0;
+  text-shadow: 2px 2px 2px black;
+}
+.templI .quote {
+  flex: 0 1 30%;
+  border: 1px solid black;
+  width: 70%;
+}
+.templI .quote .bkImg {
+  background-size: cover cover;
+  width: 100%;
+  height: 100%;
+}
+.templI .quote p {
+  text-align: right;
+}
+.templI h3 {
+  padding-top: 5em;
+  padding-bottom: 1.2em;
+  align-content: flex-end;
+}
+
+.templII {
+  /*Two Panel design
+  *Left panel displays a quote and a picture.
+  *Right panel is just an image.
+  */
+  display: flex;
+}
+.templII .left {
+  flex: 0 1 60%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.templII .left h1 {
+  padding: 5px 0;
+  border-bottom: 2px solid white;
+}
+.templII .left h3 {
+  padding: 5px 0;
+  border-top: 2px solid white;
+}
+.templII .left span {
+  height: 50%;
+  width: 20%;
+  padding: 16px 4px;
+}
+.templII .left span .bkImg {
+  width: 100%;
+  height: 100%;
+  border-left: 1.2em solid;
+  background-position: center;
+  background-size: cover cover;
+  position: relative;
+  z-index: 4;
+}
+.templII .right {
+  flex: 1;
+  position: relative;
+  z-index: 4;
+}
+
+.templ3 {
+  /*Author's name in the background
+  *Poster image is centered
+  */
+}
+.templ3 .backgroundText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  font-weight: bold;
+  background-clip: text;
+  -webkit-background-clip: text;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.4;
+}
+.templ3 .backgroundText h3 {
+  width: 100vw;
+  height: 25vh;
+  font-size: 10em;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-align: center;
+  letter-spacing: 10px;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.524);
+}
+.templ3 .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.templ3 .content .bkImg {
+  flex: 0 1 66vh;
+  width: 25%;
+  background-position: center;
+  background-size: cover cover;
+}
+.templ3 .content h1 {
+  align-content: flex-end;
+  padding: 1px 1vw;
+}
+
+.templ4 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.templ4 .top {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 35%;
+  overflow: hidden;
+  opacity: 0.85;
+}
+.templ4 .bottom {
+  width: 100%;
+  flex: 1 0;
+  background-size: cover;
+  opacity: 0.35;
+}
+.templ4 .bottom .author {
+  width: 100%;
+  padding-bottom: 2vh;
+  text-align: center;
+  font-size: 2em;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.507);
+  letter-spacing: 0.56em;
+  filter: saturate(200%) invert(1);
+  font-weight: bolder;
+  color: transparent;
+  background-attachment: fixed;
+}
+
+.templV {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.templV .bkImg {
+  width: 40%;
+  height: 80%;
+  padding: 2vh 5vw;
+  border: 6px solid white;
+  border-radius: 2px;
+}
+.templV p {
+  padding-top: 2vh;
+}
+
+.templ6 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.templ6 .longDesc {
+  width: 70%;
+  padding: 2vh 3.5vw;
+  font-size: 2em;
+  text-align: center;
+}
+
+.templ7 {
+  /*Author's name in the background
+  *3 Poster image is centered
+  */
+}
+.templ7 .backgroundText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  font-weight: bold;
+  background-clip: text;
+  -webkit-background-clip: text;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.4;
+}
+.templ7 .backgroundText h3 {
+  width: 100vw;
+  height: 25vh;
+  font-size: 10em;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-align: center;
+  letter-spacing: 10px;
+  color: transparent !important;
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.524);
+}
+.templ7 .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.templ7 .content span {
+  display: flex;
+  flex-flow: row;
+  flex: 0 0 70%;
+  width: 95%;
+}
+.templ7 .content span .bkImg {
+  flex: 0 1 66vh;
+  width: 25%;
+  background-position: center;
+  background-size: contain;
+}
+.templ7 .content h1 {
+  align-content: flex-end;
+  padding: 1px 1vw;
+}
+
+.templ8 {
+  overflow: hidden;
+}
+.templ8 .bkText p {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  font-size: 1000vh;
+  background-clip: text;
+  -webkit-background-clip: text;
+  line-height: 100vh;
+  color: transparent !important;
+}
+.templ8 .overlay {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 10vh 10vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 2px black;
+}
+.templ8 .overlay .headshot {
+  background-size: cover;
+  background-position: center;
+  border-radius: 100%;
+  border: 2px solid black;
+  width: 25%;
+}
+.templ8 .overlay .title {
+  font-size: 1.5em;
+}
+.templ8 .overlay .quoteText {
+  font-size: 1.25em;
+  opacity: 1;
+}
+
+.fabric::before {
+  content: " ";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background: url(../assets/45-degree-fabric-light.png);
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+}
+
+.dots5::before {
+  content: " ";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background: url(../assets/5-dots.png);
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+}
+
+.dots5::before {
+  content: " ";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background: url(../assets/5-dots.png);
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+}
+
+.beanstalk::before {
+  content: " ";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background: url(../assets/beanstalk-dark.png);
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+}
+
+.denim::before {
+  content: " ";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background: url(../assets/denim.png);
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+}
+
+.dotgrid::before {
+  content: " ";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background: url(../assets/dot-grid.png.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+}
+
+.square::before {
+  content: " ";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background: url(../assets/repeated-square-dark.png);
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+}
+
+.sowhite::before {
+  content: " ";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background: url(../assets/so-white.png);
+  background-size: 3em;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+}
+
+.whitewall::before {
+  content: " ";
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background: url(../assets/white_wall_hash.png);
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+}
+
+#landing {
+  background: linear-gradient(180deg, rgb(134, 36, 43) 45%, rgba(74, 24, 28, 0.95) 100%);
+  font-family: "Ubuntu", sans-serif;
+  background-attachment: fixed;
+  text-shadow: #000 3px 3px 1px;
+}
+#landing h1 {
+  font-size: 5rem;
+  color: #fff;
+  padding: 15vh 10vh 5vw;
+  z-index: 3;
+  position: relative;
+}
+#landing p {
+  color: #e49173;
+  font-size: 1.321em;
+  padding-left: calc(5vw + 1em);
+  font-family: "Playfair Display", sans-serif;
+  z-index: 3;
+  position: relative;
+}
+#landing .action {
+  color: #e49173;
+  padding-left: calc(5vw + 1em);
+  padding-top: 0.4em;
+  font-size: 1.5em;
+  animation: blinkText 2s steps(2) infinite;
+}
+
+#landing::before {
+  filter: drop-shadow(0px 1px 31px #c9d5d2);
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background: url(../assets/45-degree-fabric-light.png);
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+}
+
+/*# sourceMappingURL=main.css.map */

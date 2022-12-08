@@ -1,0 +1,378 @@
+.templI{
+  @include flex-column-center;
+  height: 100%;
+
+  h2{
+    font-size: 2em;
+    padding: 5vh 0;
+    text-shadow:  2px 2px 2px black;
+  }
+  .quote{
+    flex: 0 1 30%;
+    border: 1px solid black;
+    width: 70%;
+    .bkImg{
+      background-size: cover cover ;
+      width: 100%; height: 100%;
+
+    }
+    p{
+      text-align: right;
+    }
+  }
+
+  h3{
+    padding-top: 5em;
+    padding-bottom: 1.2em;
+    align-content: flex-end;
+  }
+}
+.templII{
+  /*Two Panel design
+  *Left panel displays a quote and a picture.
+  *Right panel is just an image.
+  */
+  display: flex;
+  .left{
+    flex: 0 1 60%;
+    width: 100%; height: 100%;
+    @include flex-column-center;
+    h1{ padding: 5px 0; border-bottom: 2px solid white;}
+    h3{ padding: 5px 0; border-top: 2px solid white; }
+    span{
+      height: 50%;
+      width: 20%;
+      padding: 16px 4px;
+      // border-top: 2px solid white;
+      // border-bottom: 2px solid white;
+      .bkImg{
+        width: 100%;
+        height: 100%;
+        border-left: 1.2em solid;
+        background-position: center;
+        background-size: cover cover;
+        position: relative;
+        z-index: 4;
+      }
+    }
+  }
+  .right{
+    flex: 1;
+    position: relative;
+    z-index: 4;
+  }
+}
+.templ3{
+  /*Author's name in the background
+  *Poster image is centered
+  */
+  .backgroundText{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100vh;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+    @include flex-column-center;
+    justify-content: space-between;
+    opacity: 0.4;
+    h3{
+      width: 100vw;
+      height: 25vh;
+      font-size: 10em;
+      background-clip: text;
+      -webkit-background-clip: text;
+      text-align: center;
+      letter-spacing: 10px;
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(0, 0, 0, 0.524);
+    }
+  }
+  .content{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw; height:  100vh;
+    display: flex;
+    
+    @include flex-column-center;
+    text-align: center;
+    .bkImg{
+      flex: 0 1 66vh;
+      width: 25%;
+      background-position: center;
+      background-size: cover cover;
+    }
+    h1{
+      align-content: flex-end;
+      padding: 1px 1vw;
+    }
+  }
+
+}
+
+.templ4{
+  width: 100vw; height: 100vh;
+  @include flex-column-center;
+  .top{
+    @include flex-column-center;
+    flex: 0 0 35%;
+    overflow: hidden;
+    opacity: 0.85;
+  }
+  .bottom{
+    width: 100%;
+    flex: 1 0;
+    background-size: cover;
+    opacity: 0.35;
+    .author{
+      width: 100%;
+      padding-bottom:2vh; 
+      text-align: center;
+      font-size: 2em;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-stroke: 1px rgba(0, 0, 0, 0.507);
+      letter-spacing: .56em;
+      filter: saturate(200%) invert(1);
+      font-weight: bolder;
+      color: transparent;
+      background-attachment: fixed;
+    }
+  }
+}
+
+.templV{
+  width: 100vw; height: 100vh;
+  @include flex-column-center;
+  .bkImg{
+    width: 40%;
+    height: 80%;
+    padding: 2vh 5vw;
+    border: 6px solid white;
+    border-radius: 2px;
+  }
+  p{
+    padding-top: 2vh;
+  }
+}
+.templ6{
+  width: 100vw; height: 100vh;
+  @include flex-column-center;
+  .longDesc{
+    width: 70%;
+    padding: 2vh 3.5vw;
+    font-size: 2em;
+    text-align: center;
+
+  }
+}
+.templ7{
+  /*Author's name in the background
+  *3 Poster image is centered
+  */
+  .backgroundText{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100vh;
+    font-weight: bold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    
+    @include flex-column-center;
+    justify-content: space-between;
+    opacity: 0.4;
+    h3{
+      width: 100vw;
+      height: 25vh;
+      font-size: 10em;
+      background-clip: text;
+      -webkit-background-clip: text;
+      text-align: center;
+      letter-spacing: 10px;
+      color: transparent !important;
+      -webkit-text-stroke: 2px rgba(0, 0, 0, 0.524);
+    }
+  }
+  .content{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw; height:  100vh;
+    display: flex;
+    @include flex-column-center;
+    text-align: center;
+    span{
+      @include flex-row;
+      flex: 0 0 70%;
+      width: 95%;
+      .bkImg{
+        flex: 0 1 66vh;
+        width: 25%;
+        background-position: center;
+        background-size: contain;
+      }
+    }
+    h1{
+      align-content: flex-end;
+      padding: 1px 1vw;
+    }
+  }
+
+}
+.templ8{
+  overflow: hidden;
+  .bkText{
+    p{
+      position: absolute;
+      top: 0;
+      width: 100vw;
+      font-size: 1000vh;
+      background-clip: text;
+      -webkit-background-clip: text;
+      line-height: 100vh;
+      color: transparent !important;
+    }
+  }
+  .overlay{
+    position: absolute;
+    top: 0;
+    width: 100vw; height: 100vh;
+    padding: 10vh 10vw;
+    @include flex-column-center;
+    text-shadow: 1px 1px 2px black;
+    .headshot{
+      background-size: cover;
+      background-position: center;
+      border-radius: 100%;
+      border: 2px solid black;
+      width: 25%;
+    }
+    .title{
+      font-size: 1.5em;
+    }
+    .quoteText{
+      font-size: 1.25em;
+      opacity: 1;
+    }
+
+  }
+}
+.fabric::before{
+  //margin-left: calc($paddingLanding * -1);
+  content: " ";
+  width: 100vw; height: 100vh;
+  top: 0;
+  background: url(../assets/45-degree-fabric-light.png) ;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+  
+}
+
+.dots5::before{
+  //margin-left: calc($paddingLanding * -1);
+  content: " ";
+  width: 100vw; height: 100vh;
+  top: 0;
+  background: url(../assets/5-dots.png) ;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+  
+
+}
+.dots5::before{
+  //margin-left: calc($paddingLanding * -1);
+  content: " ";
+  width: 100vw; height: 100vh;
+  top: 0;
+  background: url(../assets/5-dots.png) ;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+  
+
+}
+
+.beanstalk::before{
+  //margin-left: calc($paddingLanding * -1);
+  content: " ";
+  width: 100vw; height: 100vh;
+  top: 0;
+  background: url(../assets/beanstalk-dark.png) ;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+  
+
+}
+
+.denim::before{
+  //margin-left: calc($paddingLanding * -1);
+  content: " ";
+  width: 100vw; height: 100vh;
+  top: 0;
+  background: url(../assets/denim.png) ;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+  
+
+}
+.dotgrid::before{
+  //margin-left: calc($paddingLanding * -1);
+  content: " ";
+  width: 100vw; height: 100vh;
+  top: 0;
+  background: url(../assets/dot-grid.png.jpeg) ;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+  
+
+}
+.square::before{
+  //margin-left: calc($paddingLanding * -1);
+  content: " ";
+  width: 100vw; height: 100vh;
+  top: 0;
+  background: url(../assets/repeated-square-dark.png) ;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+  
+
+}
+.sowhite::before{
+  //margin-left: calc($paddingLanding * -1);
+  content: " ";
+  width: 100vw; height: 100vh;
+  top: 0;
+  background: url(../assets/so-white.png) ;
+  background-size: 3em;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+  
+
+}
+.whitewall::before{
+  //margin-left: calc($paddingLanding * -1);
+  content: " ";
+  width: 100vw; height: 100vh;
+  top: 0;
+  background: url(../assets/white_wall_hash.png) ;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  animation: left-right 30s steps(12) infinite;
+  
+
+}
