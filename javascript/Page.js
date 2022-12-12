@@ -21,7 +21,7 @@ Page.prototype.display = function(){
   let palette = colors.getRandom();
   this.$.css({
     backgroundColor: palette[0],
-    color: palette[3],
+    color: palette[2],
     fontFamily: fonts.getRandom(),
     filter: `blur(${Math.min(Math.max( Math.random(), 0.1), 0.95)}px) saturate(${(Math.random()*80)}%)`
   })
@@ -43,7 +43,7 @@ Page.prototype.display = function(){
   })
   this.$.find('.quoteText').css({
     fontFamily: fonts.getRandom(),
-    color: palette[4]
+    color: palette[3]
   })
 
   this.$.find('.textFont').css({

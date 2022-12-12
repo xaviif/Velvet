@@ -16,8 +16,8 @@
         <h2 class="zfront infoTitle"></h2>
       </div>
       <div class=" quote">
-        <div class=" bkImg"></div>
-        <p>"<span class=" quoteText"></span>" -{{info.author.firstName}} {{info.author.lastName}}</p>
+        <div class=" bkImg zfront"></div>
+        <p>"<span class=" quoteText"></span>" <br>-{{info.author.firstName}} {{info.author.lastName}}</p>
       </div>
       <h3>{{info.author.firstName}} {{info.author.lastName}}</h3>
     </section>
@@ -25,13 +25,13 @@
   <script class="pageTemplate" type="text/template">
     <section class="section templII" id="{{sectionID}}">
       <div class="left">
-        <h1 class="infoTitle"></h1>
+        <h1 class="infoTitle zfront"></h1>
         <span>
-          <div class="bkImg borderColor "></div>
+          <div class="bkImg borderColor zfront"></div>
         </span>
-        <h3>{{info.author.firstName}} {{info.author.lastName}}</h3>
+        <h3 class="zfront">{{info.author.firstName}} {{info.author.lastName}}</h3>
       </div>
-      <div class="right bkImg ">
+      <div class="right bkImg zfront">
       </div>
     </section>
   </script>
@@ -80,17 +80,17 @@
       </div>
       <div class="content">
         <span>
-          <div class="bkImg">
+          <div class="bkImg zfront">
 
           </div>
-          <div class="bkImg">
+          <div class="bkImg zfront">
 
           </div>
-          <div class="bkImg">
+          <div class="bkImg zfront">
 
           </div>
         </span>
-        <h1 class="accent-bkColor textFont">{{info.author.firstName}} {{info.author.lastName}}</h1>
+        <h1 class="primary-bkColor textFont">{{info.author.firstName}} {{info.author.lastName}}</h1>
       </div>
     </section>
   </script>
@@ -102,9 +102,9 @@
         <p class="bkImg quoteText" ></p>
       </div>
       <div class="overlay">
-        <div class="headshot"></div>
-        <h2 class="title">{{info.author.firstName}} {{info.author.lastName}}</h2>
-        <h4>"<span class="quoteText"></span>"</h4>
+        <div class="headshot zfront"></div>
+        <h2 class="title zfront">{{info.author.firstName}} {{info.author.lastName}}</h2>
+        <h4>"<span class="quoteText zfront"></span>"</h4>
       </div>
     </section>
   </script>
@@ -112,15 +112,15 @@
 <body>
   <main id="fullpage"> 
     <section class="section" id="landing">
-      <h1 class="zfront"> 
+      <h1 class=""> 
         Velvet
       </h1>
-      <p class="zfront">Want To Beat Those Feelings of <span class="sadText">Demotivation</span>?<br>
+      <p class="">Want To Beat Those Feelings of <span class="sadText">Demotivation</span>?<br>
         Try <span class="highlightText">Velvet</span>!<br>
         Stop Wasting Your Time on Social Media! Get 10x Results from <span class="highlightText">Velvet</span> today!<br>
         <span class="highlightText">Velvet</span> is Here!
       </p>
-      <p class="action zfront">Start Scrolling to Start!</p>
+      <p class="action ">Start Scrolling to Start!</p>
     </section>  
   </main>
   <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>

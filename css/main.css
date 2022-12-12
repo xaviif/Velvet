@@ -8,7 +8,7 @@
 body, html {
   max-width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .highlightText {
@@ -28,8 +28,8 @@ body, html {
 
 #fullpage {
   scroll-snap-type: both mandatory;
-  overflow: scroll;
   height: 100vh;
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 
@@ -47,6 +47,11 @@ body, html {
 
 .text-right {
   text-align: right;
+}
+
+.zfront {
+  position: relative;
+  z-index: 3;
 }
 
 @keyframes left-right {
@@ -71,6 +76,28 @@ body, html {
     filter: blur(0.25px) contrast(20%) opacity(41%);
   }
 }
+@keyframes denim {
+  0% {
+    background-position: 0% 0%;
+    filter: blur(0px) contrast(15%) opacity(45%);
+  }
+  5% {
+    background-position: 1% 2vh;
+    filter: blur(0.2px) contrast(13%) opacity(35%);
+  }
+  50% {
+    background-position: 5vw 50vh;
+    filter: contrast(10%);
+  }
+  90% {
+    background-position: 100vw 120vh;
+    filter: blur(0.25px) contrast(22%) opacity(36%);
+  }
+  100% {
+    background-position: 100vw 125vh;
+    filter: blur(0.25px) contrast(20%) opacity(46%);
+  }
+}
 @keyframes blinkText {
   0% {
     color: white;
@@ -81,13 +108,13 @@ body, html {
 }
 .particle {
   position: fixed;
-  z-index: 2;
+  z-index: 1;
   border-radius: 100%;
 }
 
 .small {
-  width: 1px;
-  height: 1px;
+  width: 2px;
+  height: 2px;
 }
 
 .medium {
@@ -101,11 +128,11 @@ body, html {
 }
 
 .far {
-  background-color: rgba(208, 198, 198, 0.247);
+  background-color: rgba(235, 243, 234, 0.247);
 }
 
 .near {
-  background-color: rgba(241, 232, 232, 0.304);
+  background-color: rgba(251, 250, 250, 0.304);
 }
 
 .close {
@@ -136,8 +163,11 @@ body, html {
 }
 .templI .quote p {
   text-align: right;
+  width: 55%;
+  float: right;
 }
 .templI h3 {
+  position: relative;
   padding-top: 5em;
   padding-bottom: 1.2em;
   align-content: flex-end;
@@ -158,6 +188,7 @@ body, html {
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .templII .left h1 {
   padding: 5px 0;
@@ -276,7 +307,7 @@ body, html {
   letter-spacing: 0.56em;
   filter: saturate(200%) invert(1);
   font-weight: bolder;
-  color: transparent;
+  color: rgba(0, 0, 0, 0.507);
   background-attachment: fixed;
 }
 
@@ -287,6 +318,7 @@ body, html {
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .templV .bkImg {
   width: 40%;
@@ -294,9 +326,11 @@ body, html {
   padding: 2vh 5vw;
   border: 6px solid white;
   border-radius: 2px;
+  position: relative;
 }
 .templV p {
   padding-top: 2vh;
+  position: relative;
 }
 
 .templ6 {
@@ -375,12 +409,13 @@ body, html {
   padding: 1px 1vw;
 }
 
-.templ8 {
+.templ8 * {
   overflow: hidden;
 }
 .templ8 .bkText p {
   position: absolute;
   top: 0;
+  left: -18vw;
   width: 100vw;
   font-size: 1000vh;
   background-clip: text;
@@ -389,8 +424,7 @@ body, html {
   color: transparent !important;
 }
 .templ8 .overlay {
-  position: absolute;
-  top: 0;
+  position: relative;
   width: 100vw;
   height: 100vh;
   padding: 10vh 10vw;
@@ -399,6 +433,7 @@ body, html {
   justify-content: center;
   align-items: center;
   text-shadow: 1px 1px 2px black;
+  background-color: rgba(81, 86, 90, 0.652);
 }
 .templ8 .overlay .headshot {
   background-size: cover;
@@ -415,6 +450,7 @@ body, html {
   font-size: 1.55em;
   opacity: 1;
   padding: 0.3px 10px;
+  background-color: white;
 }
 .templ8 .overlay .quoteText {
   font-size: 1em;
@@ -474,10 +510,10 @@ body, html {
   height: 100vh;
   top: 0;
   background: url(../assets/denim.png);
-  background-size: cover;
+  background-size: 75vw 75vh;
   background-attachment: fixed;
   position: absolute;
-  animation: left-right 30s steps(12) infinite;
+  animation: denim 28.4s steps(12) infinite;
 }
 
 .dotgrid::before {
@@ -490,6 +526,7 @@ body, html {
   background-attachment: fixed;
   position: absolute;
   animation: left-right 30s steps(12) infinite;
+  opacity: 0.4;
 }
 
 .square::before {
@@ -509,7 +546,7 @@ body, html {
   width: 100vw;
   height: 100vh;
   top: 0;
-  background: url(../assets/so-white.png);
+  background: url(../assets/45-degree-fabric-light.png);
   background-size: 3em;
   background-attachment: fixed;
   position: absolute;
@@ -521,7 +558,7 @@ body, html {
   width: 100vw;
   height: 100vh;
   top: 0;
-  background: url(../assets/white_wall_hash.png);
+  background: url(../assets/45-degree-fabric-light.png);
   background-size: cover;
   background-attachment: fixed;
   position: absolute;
@@ -533,21 +570,18 @@ body, html {
   font-family: "Ubuntu", sans-serif;
   background-attachment: fixed;
   text-shadow: #000 3px 3px 1px;
+  position: relative;
 }
 #landing h1 {
   font-size: 5rem;
   color: #fff;
   padding: 15vh 10vh 5vw;
-  z-index: 3;
-  position: relative;
 }
 #landing p {
   color: #e49173;
   font-size: 1.321em;
   padding-left: calc(5vw + 1em);
   font-family: "Playfair Display", sans-serif;
-  z-index: 3;
-  position: relative;
 }
 #landing .action {
   color: #e49173;

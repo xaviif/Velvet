@@ -10,12 +10,11 @@ $paddingLanding: 5vw;
   font-family: 'Ubuntu', sans-serif;
   background-attachment: fixed;
   text-shadow: #000 3px 3px 1px;
+  position: relative;
   h1{
     font-size: 5rem;
     color: #fff;
     padding: 15vh 10vh $paddingLanding;
-    z-index: 3;
-    position: relative;
     
   }
   p{
@@ -23,8 +22,6 @@ $paddingLanding: 5vw;
     font-size: 1.321em;
     padding-left: calc($paddingLanding + 1em);
     font-family: 'Playfair Display', sans-serif;
-    z-index: 3;
-    position: relative;
   }
   .action{
     color: #e49173;

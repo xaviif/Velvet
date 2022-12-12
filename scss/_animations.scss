@@ -22,6 +22,30 @@
     filter: blur(0.25px) contrast(20%) opacity(41%);
   }
 }
+@keyframes denim {
+  0%{ 
+    background-position: 0% 0%;
+    filter: blur(0px) contrast(15%) opacity(45%);
+  }
+  5%{ 
+    background-position: 1% 2vh;
+    filter: blur(0.2px) contrast(13%) opacity(35%);
+  }
+
+  50%{ 
+    background-position: 5vw 50vh;
+    filter: contrast(10%) 
+  }
+
+  90%{ 
+    background-position: 100vw 120vh;
+    filter: blur(0.25px) contrast(22%) opacity(36%);
+  }
+  100%{ 
+    background-position: 100vw 125vh;
+    filter: blur(0.25px) contrast(20%) opacity(46%);
+  }
+}
 
 @keyframes blinkText {
   0%{
